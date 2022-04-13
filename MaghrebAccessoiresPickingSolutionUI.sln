@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaghrebAccessoiresPickingSolutionUI1", "MaghrebAccessoiresPickingSolutionUI\MaghrebAccessoiresPickingSolutionUI1.csproj", "{0BEB5F8A-B672-4289-92F3-21CFDF1D49D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BEB5F8A-B672-4289-92F3-21CFDF1D49D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEB5F8A-B672-4289-92F3-21CFDF1D49D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEB5F8A-B672-4289-92F3-21CFDF1D49D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEB5F8A-B672-4289-92F3-21CFDF1D49D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D858CFF-321F-4FB1-9BC5-447CE852D265}
+	EndGlobalSection
+EndGlobal
