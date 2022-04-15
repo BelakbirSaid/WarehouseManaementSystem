@@ -21,10 +21,10 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         // public List<playes> myListOfPlayers = new List<players>();
         //public string[] levels1 = {"2","1","3"};
-        public string[] levels = { "1"};
+        public string[] levels = { "1","2","3"};
         
 
-        public string[] coul1 = { "5", "2", "1", "3", "6", "4", "7", "8", "9", "10", "11", "12", "13" };
+        public string[] coul1 = { "05", "02", "01", "03", "06", "04", "07", "08", "09", "10", "11", "12", "13" };
 
 
         public DataTable Picking;
@@ -175,7 +175,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                             using (SqlConnection connection3 = new SqlConnection(connectionString1))
                             {
-                                string sqQueryEmpl = "select [Emp] ,[MAG] ,[A] ,[C] ,[H] ,[Index] AS indice,[Distance],[Hauteur],[Longueur],[Profondeur],[Classe] from  siteAP where MAG like 'MAG" + M+ "%' and A like 'A0" +A+ "       %' order by [Index]";
+                                string sqQueryEmpl = "select [Emp] ,[MAG] ,[A] ,[C] ,[H] ,[Index] AS indice,[Distance],[Hauteur],[Longueur],[Profondeur],[Classe] from  siteAP where MAG like 'MAG" + M+ "%' and A like 'A" +A+ "       %' order by [Index]";
                                 SqlCommand command4 = new SqlCommand(sqQueryEmpl, connection3);
                                 SqlDataAdapter dataAdapter4 = new SqlDataAdapter(command4);
                    
@@ -233,9 +233,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
                             // affectation ep ca
                             dtbl6.Columns.Add("EmplOptimal", typeof(string));
                             dtbl6.Columns.Add("classe", typeof(string));
-
-
-
                             dtbl6.DefaultView.Sort = "VarCom Desc";
 
                             dtbl6 = dtbl6.DefaultView.ToTable(true);
@@ -283,7 +280,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                             }
 
-                        SitAP = dtbl6.Clone();
+                       
 
                     //upoa
                         for (int p = 0; p < dtbl6.Rows.Count; p++)
@@ -320,18 +317,17 @@ namespace MaghrebAccessoiresPickingSolutionUI
                                     cmd.ExecuteNonQuery();
                                 }
                             }
+                            
                         }
+
+                        this.dataGridView1.DataSource = dtbl6;
                     }
 
 
 
                     }
 
-
-
-
-
-                    
+                
 
 
             }
@@ -353,12 +349,12 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
             
                 Parallel.For(0, coul1.Length, i => {
-              
-
-                    UpdateAisle(coul1[i], levels[0]);
-                   
-                
+      
                 });
+
+            UpdateAisle(coul1[10], levels[0]);
+           
+
             this.label1.Text = "done";
 
 
