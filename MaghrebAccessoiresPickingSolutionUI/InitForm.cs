@@ -126,49 +126,49 @@ namespace MaghrebAccessoiresPickingSolutionUI
                             dtbl6.Columns.Add("Laroccu", typeof(decimal));
 
 
-                            dtbl6.DefaultView.Sort = "VarCom Desc";
-                            dtbl6 = dtbl6.DefaultView.ToTable(true);
 
 
                             decimal NumbinPall;
                             DataTable dtba = new DataTable();
                             // separation des cathégories 
-                            dtba = dtbl6.Clone();
+                            dtba = dtbl6.Copy() ;
 
-                            for (int j4 = 0; j4 < dtbl6.Rows.Count; j4++)
-                            {
-                                NumbinPall = Convert.ToDecimal(dtbl6.Rows[j4]["TPALL"].ToString());
-                                DataRow recordItem = dtbl6.Rows[j4];
-                                // DataRow recLow = dtba.Rows[j4];
 
-                                if (NumbinPall >= 8)
-                                {
 
-                                    recordItem.Delete();
 
-                                }
 
-                            }
+                        //this.dataGridView1.DataSource = dtbl6;
+
+
+                        for (int i = dtbl6.Rows.Count - 1; i >= 0; i--)
+                        {
+                            DataRow dr = dtbl6.Rows[i];
+
+                            if (Convert.ToDecimal(dr["TPALL"].ToString()) > 8 ) 
+                                dr.Delete();
                             dtbl6.AcceptChanges();
+                        }
 
-                            for (int j4 = 0; j4 < dtba.Rows.Count; j4++)
-                            {
-                                NumbinPall = Convert.ToDecimal(dtba.Rows[j4]["TPALL"].ToString());
-                                DataRow recordItem1 = dtba.Rows[j4];
-    
-                                if (NumbinPall < 8)
-                                {
 
-                                recordItem1.Delete();
-                                }
+                        for (int i = dtba.Rows.Count - 1; i >= 0; i--)
+                        {
+                            DataRow dr = dtba.Rows[i];
 
-                            }
-
+                            if (Convert.ToDecimal(dr["TPALL"].ToString()) <8 ) 
+                                dr.Delete();
                             dtba.AcceptChanges();
+                        }
 
-                            superC = dtba;
 
-                            //
+
+
+                        this.dataGridView1.DataSource = dtba;
+
+                        superC = dtba.Clone();
+                        
+                        //
+
+                       
                            //
 
 
@@ -176,29 +176,24 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                         
                         
-                        for (int p = 0; p < superC.Rows.Count; p++)
+                        for (int p = 0; p < dtba.Rows.Count; p++)
                         {
                             string connectionString2 = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
                             using (SqlConnection connection3 = new SqlConnection(connectionString2))
                             {
-                                string reference = superC.Rows[p]["reference"].ToString();  
+                                string reference = dtba.Rows[p]["reference"].ToString();  
                                 
-                                string EmplacementAct = superC.Rows[p]["EmpAct"].ToString();
+                                string EmplacementAct = dtba.Rows[p]["EmpAct"].ToString();
                 
-                                string TPALL = superC.Rows[p]["TPALL"].ToString();
-                                string Stock_actuel = superC.Rows[p]["Stock_actuel"].ToString();
-                                string QT3Mois = superC.Rows[p]["QT3Mois"].ToString();
+                                string TPALL = dtba.Rows[p]["TPALL"].ToString();
+                                string Stock_actuel = dtba.Rows[p]["Stock_actuel"].ToString();
+                                string QT3Mois = dtba.Rows[p]["QT3Mois"].ToString();
 
-                                string Quantity = superC.Rows[p]["Quantity"].ToString();
-                                string Prix_Unitaire = superC.Rows[p]["Prix_Unitaire"].ToString();
-                                string Nombre_de_Factures = superC.Rows[p]["Nombre_de_Factures"].ToString();
-                                string Famille = superC.Rows[p]["Famille"].ToString();
-                                string CM = superC.Rows[p]["CM"].ToString();
-
-
-                                
-
-
+                                string Quantity = dtba.Rows[p]["Quantity"].ToString();
+                                string Prix_Unitaire = dtba.Rows[p]["Prix_Unitaire"].ToString();
+                                string Nombre_de_Factures = dtba.Rows[p]["Nombre_de_Factures"].ToString();
+                                string Famille = dtba.Rows[p]["Famille"].ToString();
+                                string CM = dtba.Rows[p]["CM"].ToString();
 
 
 
@@ -229,11 +224,12 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         }
                         
                         
+                        
 
 
 
                         dtbl6.DefaultView.Sort = "VarCom Desc";
-                            dtbl6 = dtbl6.DefaultView.ToTable(true);
+                        dtbl6 = dtbl6.DefaultView.ToTable(true);
                             
                         
 
@@ -707,15 +703,15 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 //
 
 
-              
+                
+                //
+
                 Parallel.For(0, coul1.Length, i =>
                 {
 
-
-                    UpdateAisle(coul1[i], levels[j]);
+                    UpdateAisle(coul1[4], levels[0]);
+                    // UpdateAisle(coul1[i], levels[j]);
                     //
-
-
 
                 });
             }
