@@ -306,6 +306,12 @@
       <DependentUpon>InitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="methods.cs" />
+    <Compile Include="NavLogMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavLogMenu.Designer.cs">
+      <DependentUpon>NavLogMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -346,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InitForm.resx">
       <DependentUpon>InitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavLogMenu.resx">
+      <DependentUpon>NavLogMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

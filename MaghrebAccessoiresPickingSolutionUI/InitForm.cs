@@ -162,7 +162,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
 
-                        this.dataGridView1.DataSource = dtba;
+                        //
 
                         superC = dtba.Clone();
                         
@@ -700,16 +700,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
             for (int j = 0; j < levels.Length; j++)
             {
 
-                //
-
-
-                
-                //
 
                 Parallel.For(0, coul1.Length, i =>
                 {
 
-                    UpdateAisle(coul1[4], levels[0]);
+                    UpdateAisle(coul1[i], levels[j]);
                     // UpdateAisle(coul1[i], levels[j]);
                     //
 

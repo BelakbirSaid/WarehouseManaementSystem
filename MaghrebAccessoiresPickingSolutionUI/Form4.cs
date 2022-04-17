@@ -81,6 +81,17 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button5_Click(object sender, EventArgs e)
         {
             showSub(panelNavsub);
+
+            openChildFormInPanel(new NavLogMenu());
+
+
+
+
+
+
+
+
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -88,6 +99,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             //..
 
             openChildFormInPanel(new Form5());
+
             hideSub();
 
 
