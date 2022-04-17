@@ -52,16 +52,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.paneltoolssub.SuspendLayout();
             this.panelHeatmapsub.SuspendLayout();
             this.panelclassSub.SuspendLayout();
             this.panelNavsub.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -94,7 +92,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.ForeColor = System.Drawing.Color.Silver;
-            this.button19.Location = new System.Drawing.Point(0, 807);
+            this.button19.Location = new System.Drawing.Point(0, 846);
             this.button19.Name = "button19";
             this.button19.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button19.Size = new System.Drawing.Size(229, 45);
@@ -113,7 +111,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.ForeColor = System.Drawing.Color.Silver;
-            this.button18.Location = new System.Drawing.Point(0, 762);
+            this.button18.Location = new System.Drawing.Point(0, 801);
             this.button18.Name = "button18";
             this.button18.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button18.Size = new System.Drawing.Size(229, 45);
@@ -131,7 +129,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.paneltoolssub.Controls.Add(this.button4);
             this.paneltoolssub.Controls.Add(this.button17);
             this.paneltoolssub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneltoolssub.Location = new System.Drawing.Point(0, 630);
+            this.paneltoolssub.Location = new System.Drawing.Point(0, 669);
             this.paneltoolssub.Name = "paneltoolssub";
             this.paneltoolssub.Size = new System.Drawing.Size(229, 132);
             this.paneltoolssub.TabIndex = 9;
@@ -201,7 +199,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(0, 585);
+            this.button2.Location = new System.Drawing.Point(0, 624);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(229, 45);
@@ -218,7 +216,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panelHeatmapsub.Controls.Add(this.button15);
             this.panelHeatmapsub.Controls.Add(this.button16);
             this.panelHeatmapsub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeatmapsub.Location = new System.Drawing.Point(0, 490);
+            this.panelHeatmapsub.Location = new System.Drawing.Point(0, 529);
             this.panelHeatmapsub.Name = "panelHeatmapsub";
             this.panelHeatmapsub.Size = new System.Drawing.Size(229, 95);
             this.panelHeatmapsub.TabIndex = 7;
@@ -268,7 +266,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.Silver;
-            this.button13.Location = new System.Drawing.Point(0, 445);
+            this.button13.Location = new System.Drawing.Point(0, 484);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(229, 45);
@@ -286,7 +284,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panelclassSub.Controls.Add(this.button10);
             this.panelclassSub.Controls.Add(this.button12);
             this.panelclassSub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelclassSub.Location = new System.Drawing.Point(0, 319);
+            this.panelclassSub.Location = new System.Drawing.Point(0, 358);
             this.panelclassSub.Name = "panelclassSub";
             this.panelclassSub.Size = new System.Drawing.Size(229, 126);
             this.panelclassSub.TabIndex = 5;
@@ -355,7 +353,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.Silver;
-            this.button9.Location = new System.Drawing.Point(0, 274);
+            this.button9.Location = new System.Drawing.Point(0, 313);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button9.Size = new System.Drawing.Size(229, 45);
@@ -369,12 +367,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // panelNavsub
             // 
             this.panelNavsub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelNavsub.Controls.Add(this.button11);
             this.panelNavsub.Controls.Add(this.button7);
             this.panelNavsub.Controls.Add(this.button8);
             this.panelNavsub.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNavsub.Location = new System.Drawing.Point(0, 185);
             this.panelNavsub.Name = "panelNavsub";
-            this.panelNavsub.Size = new System.Drawing.Size(229, 89);
+            this.panelNavsub.Size = new System.Drawing.Size(229, 128);
             this.panelNavsub.TabIndex = 3;
             // 
             // button7
@@ -455,22 +454,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.BackgroundImage = global::MaghrebAccessoiresPickingSolutionUI.Properties.Resources.logoAp__;
+            this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(229, 95);
             this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MaghrebAccessoiresPickingSolutionUI.Properties.Resources.logoAp__;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2327, 620);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -490,6 +480,24 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panelChildForm.Size = new System.Drawing.Size(880, 637);
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
+            // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.Silver;
+            this.button11.Location = new System.Drawing.Point(0, 80);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(229, 40);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "Dashboard ";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // Form4
             // 
@@ -519,9 +527,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panelHeatmapsub.ResumeLayout(false);
             this.panelclassSub.ResumeLayout(false);
             this.panelNavsub.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,8 +556,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

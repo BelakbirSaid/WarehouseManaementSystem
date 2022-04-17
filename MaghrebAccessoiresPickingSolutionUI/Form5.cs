@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
+using System.IO;
+
+
 //using MySql.Data.MySqlClient;
 
 
@@ -19,13 +22,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
         public Form5()
         {
             InitializeComponent();
-            comboBox1.SelectedItem = "01";
-            comboBox1.Enabled = false;
-            comboBox2.SelectedItem = "Autoplus";
-            comboBox2.Enabled = false; 
-
-
-
+            
 
 
         }
@@ -63,12 +60,24 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
 
             string emplacement = textBox1.Text;  
-            string connectionString = "Data Source=192.168.50.203;Initial Catalog=B2B;User ID=excel1;Password=mmmmmm";
+
+            if (textBox1.Text == ""  )
+            {
+                emplacement = "MAG"+ comboBox1.Text +"-A"+ comboBox2.Text ;
+
+            }
+
+
+
+
+            string connectionString = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string sqlQuery = "SELECT   U_emp as Emplacement , ItemCode as Réf, OnHand as QtStock from oitw t1 where t1.WhsCode = '01' and t1.U_emp like '%" + emplacement+"%'";
+                    string sqlQuery = "SELECT [Reference] ,[EmplacementOpt] , [EmplacementAct] ,[Classe] ,[qtystock] AS Stock,[CM] AS Code_Marque,[Famille],[Description],[blocs] AS Nombre_Unite_Didie FROM [Table_1] Where [EmplacementAct] like '%"+ emplacement + "%'";
+                    string sqlQuery1 = "SELECT   U_emp as Emplacement , ItemCode as Réf, OnHand as QtStock from oitw t1 where t1.WhsCode = '01' and t1.U_emp like '" + emplacement + "%'";
+
 
 
                     SqlCommand command = new SqlCommand(sqlQuery, connection);
@@ -81,8 +90,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
                     dataAdapter.Fill(dtbl);
+                    dataGridView1.DataSource = dtbl; 
 
-                    dataGridViewSearch.DataSource = dtbl;
+                    //
 
 
                 }
@@ -102,57 +112,105 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridViewSearch.DataSource = new DataTable();
-            dataGridViewSearch.Columns.Clear();
+            
             this.textBox1.Clear();
+            //
+            this.comboBox1.Text = "";
+            this.comboBox2.Text = "";
+            //
+
+
+
+
+
 
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=192.168.50.203;Initial Catalog=B2B;User ID=excel1;Password=mmmmmm";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string sqlQuery = "SELECT DISTINCT whscode  from oitw";
-                    //string sqlQuery1 = "SELECT DISTINCT U_F_Art  from oitm";
-
-                    SqlCommand command = new SqlCommand(sqlQuery, connection);
-                   // SqlCommand command1 = new SqlCommand(sqlQuery1, connection);
 
 
 
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                    //SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
-
-
-                    DataTable dtbl = new DataTable();
-                    DataTable dtbl1 = new DataTable();
-
-
-                    dataAdapter.Fill(dtbl);
-                   // dataAdapter1.Fill(dtbl1);
-
-                    for (int i = 0; i < dtbl.Rows.Count; i++)
-                    {
-                        comboBox1.Items.Add(dtbl.Rows[i]["whscode"].ToString());
-                    }
-                   //
-
-                    //comboBox1.DataSource = dtbl;
-
-
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Vérfier la cnx à la bd");
-            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "CSV (*.csv)|*.csv";
+                sfd.FileName = "Output.csv";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("Erreur de Stockage du fichier" + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            int columnCount = dataGridView1.Columns.Count;
+                            string columnNames = "";
+                            string[] outputCsv = new string[dataGridView1.Rows.Count + 1];
+                            for (int i = 0; i < columnCount; i++)
+                            {
+                                columnNames += dataGridView1.Columns[i].HeaderText.ToString() + ",";
+                            }
+                            outputCsv[0] += columnNames;
+
+                            for (int i = 1; i < dataGridView1.Rows.Count; i++)
+                            {
+                                for (int j = 0; j < columnCount; j++)
+                                {
+                                    outputCsv[i] += dataGridView1.Rows[i - 1].Cells[j].Value.ToString() + ",";
+                                }
+                            }
+
+                            File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);
+                            MessageBox.Show("opération terminée!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("La table est Vide !!!", "Info");
+            }
 
         }
     }

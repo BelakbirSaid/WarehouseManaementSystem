@@ -22,49 +22,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void Form6_Load(object sender, EventArgs e)
         {
-            //string emplacement = textBox1.Text;
-            string connectionString = "Data Source=192.168.50.203;Initial Catalog=B2B;User ID=excel1;Password=mmmmmm";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string sqlQuery = "SELECT DISTINCT U_CodeMarque  from oitm";
-                    string sqlQuery1 = "SELECT DISTINCT U_F_Art  from oitm"; 
-
-                    SqlCommand command = new SqlCommand(sqlQuery, connection);
-                    SqlCommand command1 = new SqlCommand(sqlQuery1, connection);
-
-
-
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                    SqlDataAdapter dataAdapter1 = new SqlDataAdapter(command1);
-
-
-                    DataTable dtbl = new DataTable();
-                    DataTable dtbl1 = new DataTable();
-
-
-                    dataAdapter.Fill(dtbl);
-                    dataAdapter1.Fill(dtbl1);
-
-                    for (int i = 0; i < dtbl.Rows.Count; i++)
-                    {
-                        comboBox1.Items.Add(dtbl.Rows[i]["U_CodeMarque"].ToString());
-                    }
-                    for (int j = 0; j < dtbl1.Rows.Count; j++)
-                    {
-                        comboBox2.Items.Add(dtbl1.Rows[j]["U_F_Art"].ToString());
-                    }
-
-                    //comboBox1.DataSource = dtbl;
-
-
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Vérfier la cnx à la bd");
-            }
+            
         }
 
         private void dataGridViewSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,15 +35,15 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
             string refe = textBox1.Text;
-            string cm = comboBox1.Text;
-            string fam = comboBox2.Text;
+            string cm = textBox2.Text;
+            string fam = textBox3.Text;
 
-            string connectionString1 = "Data Source=192.168.50.203;Initial Catalog=B2B;User ID=excel1;Password=mmmmmm";
+            string connectionString1 = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
             try
             {
                 using (SqlConnection connection1 = new SqlConnection(connectionString1))
                 {
-                    string sqlQuery2 = "SELECT t1.ItemCode as Ref, t2.ItemName as Description , t1.U_emp as Emplacement , t1.OnHand as QtStock ,t2.BWeight1 as poids , t2.U_Volume as volume from oitw t1 join oitm t2 on t1.ItemCode = t2.ItemCode where t1.WhsCode = '01' and (t1.ItemCode like '" + refe+"' or t2.U_F_Art like '"+fam+"' or t2.U_CodeMarque like'%"+cm+"%')";
+                    string sqlQuery2 = "SELECT [Reference] ,[EmplacementOpt] , [EmplacementAct] ,[Classe] ,[qtystock] AS Stock,[CM] AS Code_Marque,[Famille],[Description],[blocs] AS Nombre_Unite_Didie FROM [Table_1] Where [Reference] like '%"+ refe + "%' AND [CM] like '"+ cm + "'  AND  [Famille] like '%"+ fam + "%'";
 
 
                     SqlCommand command2 = new SqlCommand(sqlQuery2, connection1);
@@ -117,17 +75,76 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridViewRes.DataSource = new DataTable();
-            dataGridViewRes.Columns.Clear();
             this.textBox1.Clear();
-            this.comboBox1.DataSource = new DataTable();
-            this.comboBox2.DataSource = new DataTable();
-
+            this.textBox2.Clear();
+            this.textBox3.Clear();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "CSV (*.csv)|*.csv";
+                sfd.FileName = "Output.csv";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfd.FileName))
+                    {
+                        try
+                        {
+                            File.Delete(sfd.FileName);
+                        }
+                        catch (IOException ex)
+                        {
+                            fileError = true;
+                            MessageBox.Show("Erreur de Stockage du fichier" + ex.Message);
+                        }
+                    }
+                    if (!fileError)
+                    {
+                        try
+                        {
+                            int columnCount = dataGridView1.Columns.Count;
+                            string columnNames = "";
+                            string[] outputCsv = new string[dataGridView1.Rows.Count + 1];
+                            for (int i = 0; i < columnCount; i++)
+                            {
+                                columnNames += dataGridView1.Columns[i].HeaderText.ToString() + ",";
+                            }
+                            outputCsv[0] += columnNames;
+
+                            for (int i = 1; i < dataGridView1.Rows.Count; i++)
+                            {
+                                for (int j = 0; j < columnCount; j++)
+                                {
+                                    outputCsv[i] += dataGridView1.Rows[i - 1].Cells[j].Value.ToString() + ",";
+                                }
+                            }
+
+                            File.WriteAllLines(sfd.FileName, outputCsv, Encoding.UTF8);
+                            MessageBox.Show("opération terminée!", "Info");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error :" + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("La table est Vide !!!", "Info");
+            }
         }
     }
 }
