@@ -45,7 +45,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label2 = new System.Windows.Forms.Label();
             this.panelResult = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panelRights = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             panelfree = new System.Windows.Forms.Panel();
             this.panelbarRech1.SuspendLayout();
@@ -54,7 +53,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel1Site.SuspendLayout();
             this.panelResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelRights.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelfree
@@ -93,7 +91,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button1.Size = new System.Drawing.Size(205, 46);
             this.button1.TabIndex = 15;
             this.button1.Text = "Clear";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -111,7 +108,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button3.Size = new System.Drawing.Size(185, 46);
             this.button3.TabIndex = 14;
             this.button3.Text = "Recherche";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -250,8 +246,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // panelResult
             // 
+            this.panelResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelResult.Controls.Add(this.button2);
             this.panelResult.Controls.Add(this.dataGridView1);
-            this.panelResult.Controls.Add(this.panelRights);
             this.panelResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelResult.Location = new System.Drawing.Point(0, 184);
             this.panelResult.Name = "panelResult";
@@ -267,17 +264,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1231, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(1231, 493);
             this.dataGridView1.TabIndex = 11;
-            // 
-            // panelRights
-            // 
-            this.panelRights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panelRights.Controls.Add(this.button2);
-            this.panelRights.Location = new System.Drawing.Point(0, 475);
-            this.panelRights.Name = "panelRights";
-            this.panelRights.Size = new System.Drawing.Size(1231, 134);
-            this.panelRights.TabIndex = 10;
             // 
             // button2
             // 
@@ -287,16 +275,16 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(504, 41);
+            this.button2.Location = new System.Drawing.Point(577, 540);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(147, 46);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Télécharger";
+            this.button2.Size = new System.Drawing.Size(113, 40);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Télécharger ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form5
             // 
@@ -319,7 +307,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel1Site.PerformLayout();
             this.panelResult.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelRights.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,7 +314,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
         #endregion
         private System.Windows.Forms.Panel panelbarRech1;
         private System.Windows.Forms.Panel panelResult;
-        private System.Windows.Forms.Panel panelRights;
         private System.Windows.Forms.Panel panel1Site;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;

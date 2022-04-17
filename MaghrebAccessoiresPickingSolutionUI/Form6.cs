@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
+using System.IO;
 //using MySql.Data.MySqlClient;
 
 namespace MaghrebAccessoiresPickingSolutionUI
@@ -25,10 +26,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             
         }
 
-        private void dataGridViewSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+   
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -57,7 +55,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                     dataAdapter2.Fill(dtbl2);
 
-                    dataGridViewRes.DataSource = dtbl2;
+                    dataGridView1.DataSource = dtbl2;
 
 
                 }
@@ -83,12 +81,10 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
 
             if (dataGridView1.Rows.Count > 0)
             {
@@ -107,7 +103,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         catch (IOException ex)
                         {
                             fileError = true;
-                            MessageBox.Show("Erreur de Stockage du fichier" + ex.Message);
+                            MessageBox.Show("Erreur de Stockage du fichier " + ex.Message);
                         }
                     }
                     if (!fileError)
@@ -145,6 +141,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
                 MessageBox.Show("La table est Vide !!!", "Info");
             }
+
+
         }
     }
 }

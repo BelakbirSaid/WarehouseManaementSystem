@@ -112,6 +112,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.WaitOnLoad = true;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label3
             // 
@@ -148,6 +149,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.WaitOnLoad = true;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 

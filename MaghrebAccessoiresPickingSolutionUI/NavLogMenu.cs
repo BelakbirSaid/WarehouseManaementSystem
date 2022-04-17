@@ -78,5 +78,18 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Visible = true;
+            openChildFormInPanel(new Form6());
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            panelChildForm.Visible = true;
+            openChildFormInPanel(new dAch());
+
+        }
     }
 }
