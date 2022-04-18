@@ -57,6 +57,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // panelfree
             // 
+            panelfree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             panelfree.Dock = System.Windows.Forms.DockStyle.Top;
             panelfree.Location = new System.Drawing.Point(0, 164);
             panelfree.Name = "panelfree";
@@ -257,7 +258,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);

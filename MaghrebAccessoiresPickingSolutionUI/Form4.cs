@@ -235,5 +235,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
             hideSub();
 
         }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+
+            openChildFormInPanel(new dAch());//..
+
+            hideSub();
+
+        }
     }
 }
