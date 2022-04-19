@@ -227,6 +227,12 @@
     <Compile Include="dAch.Designer.cs">
       <DependentUpon>dAch.cs</DependentUpon>
     </Compile>
+    <Compile Include="dis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dis.Designer.cs">
+      <DependentUpon>dis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="dAch.resx">
       <DependentUpon>dAch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dis.resx">
+      <DependentUpon>dis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

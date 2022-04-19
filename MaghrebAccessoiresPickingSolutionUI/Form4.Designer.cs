@@ -185,7 +185,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button17.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button17.Size = new System.Drawing.Size(229, 40);
             this.button17.TabIndex = 0;
-            this.button17.Text = "button17";
+            this.button17.Text = "Distance";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button17.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(229, 45);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Outils ";
+            this.button2.Text = "Outils d\'analyse";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
