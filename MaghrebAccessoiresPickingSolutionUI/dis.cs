@@ -19,6 +19,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
             InitializeComponent();
         }
 
+        public DataTable tabla; 
+
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -52,6 +54,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     dataGridView1.DataSource = dtbl;
 
                         string val2;
+
+                        decimal gainCum = 0; 
                        
 
                    for (int j2 = 0; j2 < dtbl.Rows.Count; j2++)
@@ -94,25 +98,52 @@ namespace MaghrebAccessoiresPickingSolutionUI
                                     dataAdapter2.Fill(dtbl2);
                                     dtbl1.Rows[0]["D2"] = Convert.ToDecimal(dtbl2.Rows[0]["D21"].ToString()) ;
 
+                                    decimal d1 = Convert.ToDecimal(dtbl1.Rows[0]["D1"].ToString());
+                                    decimal d2 = Convert.ToDecimal(dtbl1.Rows[0]["D2"].ToString());
+
                                     dataGridView3.DataSource = dtbl2;
+
                                     //dtbl1.Columns.Add("D");
 
-
+                                    tabla = dtbl1.Copy();
 
                                 }
 
 
 
                             }
-
-
+                            
+                            gainCum = Math.Abs(Convert.ToDecimal(tabla.Rows[0]["D1"].ToString()) - Convert.ToDecimal(tabla.Rows[0]["D2"].ToString()));
                         }
 
 
 
 
                         this.dataGridView1.DataSource = dtbl;
-                    
+
+                        DataTable gain = new DataTable();
+
+                        
+                        gain.Columns.Add("Numéro de Factutre", typeof(string));
+                        
+
+                        gain.Columns.Add("Gain en distance", typeof(decimal));
+                        gain.Columns.Add("Gain en sec", typeof(decimal));
+
+
+                        DataRow workRow = gain.NewRow();
+
+
+                        workRow["Numéro de Factutre"] = this.textBox1.Text;
+                        workRow["Gain en distance"] = gainCum;
+                        workRow["Gain en sec"] = 2 * gainCum / (decimal ) (1.3) ;
+
+                        gain.Rows.Add(workRow);
+
+                        dataGridView4.DataSource = gain;
+                        dataGridView2.Visible = false;
+                        dataGridView1.Visible = false; 
+                        
 
                 }
 
@@ -131,6 +162,18 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
 
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dis_Load(object sender, EventArgs e)
+        {
+            dataGridView2.Visible = false;
+            dataGridView1.Visible = false;
+            dataGridView3.Visible = false; 
         }
     }
 }
