@@ -106,7 +106,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(349, 110);
             this.button2.TabIndex = 18;
-            this.button2.Text = "Mise à jours des emplacements ";
+            this.button2.Text = "Mise à jour des emplacements ";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
