@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -133,8 +134,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button12_Click(object sender, EventArgs e)
         {
-            //..
-            openChildFormInPanel(new Form7());
+
+            openChildFormInPanel(new UpdateEmps());
+
+
+            
+           
+           //
 
             hideSub();
 
@@ -200,12 +206,20 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button18_Click(object sender, EventArgs e)
         {
+            Process.Start("https://sites.google.com/view/pfeavancementorderpicking/home");
+
+
             //..
             hideSub();
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
+            
+
+
+
+
             //..
             hideSub();
         }
@@ -241,7 +255,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            openChildFormInPanel(new Form10());//..
+            //
 
             hideSub();
 
@@ -255,5 +269,23 @@ namespace MaghrebAccessoiresPickingSolutionUI
             hideSub();
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
+        }
+
+    
     }
 }

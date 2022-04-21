@@ -200,7 +200,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 295);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1140, 345);
+            this.panel5.Size = new System.Drawing.Size(1140, 476);
             this.panel5.TabIndex = 2;
             // 
             // chart1
@@ -214,13 +214,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(626, 107);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
             series1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
             series1.BackImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             series1.LabelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             series1.LabelBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -241,7 +242,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // pieChart1
             // 
             this.pieChart1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pieChart1.Location = new System.Drawing.Point(23, 14);
+            this.pieChart1.Location = new System.Drawing.Point(23, 80);
             this.pieChart1.Name = "pieChart1";
             this.pieChart1.Size = new System.Drawing.Size(500, 378);
             this.pieChart1.TabIndex = 0;
@@ -291,7 +292,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1140, 640);
+            this.panel1.Size = new System.Drawing.Size(1140, 771);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView2
@@ -310,7 +311,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(1011, 640);
+            this.ClientSize = new System.Drawing.Size(1134, 771);
             this.Controls.Add(this.panel1);
             this.Name = "dAch";
             this.Text = "dAch";
