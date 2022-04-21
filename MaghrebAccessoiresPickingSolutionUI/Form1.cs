@@ -74,8 +74,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new InitForm().Show();
-            this.Hide();
+           //
+           //
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            new Form3().Show();
+          //
             this.Hide();
 
         }

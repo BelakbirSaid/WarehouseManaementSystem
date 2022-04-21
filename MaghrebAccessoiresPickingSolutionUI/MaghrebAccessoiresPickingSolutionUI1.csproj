@@ -305,11 +305,29 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HP.Designer.cs">
+      <DependentUpon>HP.cs</DependentUpon>
+    </Compile>
     <Compile Include="InitForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InitForm.Designer.cs">
       <DependentUpon>InitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IP.Designer.cs">
+      <DependentUpon>IP.cs</DependentUpon>
     </Compile>
     <Compile Include="methods.cs" />
     <Compile Include="NavLogMenu.cs">
@@ -317,6 +335,12 @@
     </Compile>
     <Compile Include="NavLogMenu.Designer.cs">
       <DependentUpon>NavLogMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operations.Designer.cs">
+      <DependentUpon>operations.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -359,11 +383,23 @@
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HP.resx">
+      <DependentUpon>HP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InitForm.resx">
       <DependentUpon>InitForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IP.resx">
+      <DependentUpon>IP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NavLogMenu.resx">
       <DependentUpon>NavLogMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operations.resx">
+      <DependentUpon>operations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

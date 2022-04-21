@@ -31,7 +31,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             string Mag = this.textBox4.Text ;
             string Al = this.textBox2.Text ;
             this.label1.Visible = true;
-            label1.Text = "Taux d'occupation  par CM";
+            label1.Text = "Taux d'occupation  par Famille";
             label5.Text = "Taux d'occupation  par CM";
 
 

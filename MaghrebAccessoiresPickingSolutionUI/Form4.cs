@@ -73,6 +73,10 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void Form4_Load(object sender, EventArgs e)
         {
+
+
+            openChildFormInPanel(new Home());
+
             //this.Style.BackColor = Color.DarkGray;
             //this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -208,6 +212,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            openChildFormInPanel(new Home());
+
             //..
             hideSub();
         }
