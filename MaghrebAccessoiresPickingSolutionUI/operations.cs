@@ -36,30 +36,58 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     string sqlQuery = "SELECT [Reference] ,[Description],[EmplacementOpt] , [EmplacementAct] ,[qtystock] AS Stock,[CM] AS Code_Marque,[blocs] AS QT_MAX FROM [Table_1] Where [EmplacementAct] like '%" + emplacement + "%'";
                    // string sqlQuery1 = "SELECT   U_emp as Emplacement , ItemCode as Réf, OnHand as QtStock from oitw t1 where t1.WhsCode = '01' and t1.U_emp like '" + emplacement + "%'";
 
-
-
                     SqlCommand command = new SqlCommand(sqlQuery, connection);
-
-
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-
-
                     DataTable dtbl = new DataTable();
-
-
                     dataAdapter.Fill(dtbl);
-                    dataGridView1.DataSource = dtbl;
+                   // dataGridView1.DataSource = dtbl;
 
                     //
-
-
                 }
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    
+
+                    string sqlQueryI = "INsert INTO opera Values('', '','','','')";
+
+                    // 
+                   
+                    // dataGridView1.DataSource = dtbl;
+
+                    //
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
             catch ( Exception EX)
             {
                 MessageBox.Show(EX.ToString());
             }
 
+
+        }
+
+        private void operations_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
