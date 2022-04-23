@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,12 +38,34 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new operations().Show(); 
+            
+
+            new operations().Show();
+
+            string connectionString = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // up   t1
+                connection.Open();
+                string sql = "INsert INTO opera Values('', '','','','')";
+
+                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                {
+                    //  cmd.Parameters.AddWithValue("@name", );
+                    //  cmd.Parameters.AddWithValue("@emp", emplacementop);
+                    //   cmd.Parameters.AddWithValue("@empac", EmplacementAct);
+
+
+                    // assign value to parameter 
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
 
 
 
 
+
+            }
         }
-    }
 }
