@@ -28,7 +28,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             
             string emplacement;
             string op;
-
+            
             emplacement = "MAG" + comboBox1.Text + "-A" + comboBox2.Text;
 
             string connectionString = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
@@ -59,11 +59,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                     
                     op = dtbl11.Rows[dtbl11.Rows.Count-1]["Nu_op"].ToString();
-                    this.textBox1.Text = op.ToString();
-                    dtbL = dtbl.Clone();
 
-                   // dataGridView1.DataSource = dtbl;
+                    textBox2.Text = op.ToString();
+                    //this.textBox1.Text = op.ToString();
+                    dtbL = dtbl.Copy();
+                   // dataGridView1.DataSource = dtbL;
 
+                    // dataGridView1.DataSource = dtbl;
+                    connection.Close();
                     //
                 }
 
@@ -72,30 +75,29 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                     // up   t1
                     string mag  = this.comboBox1.Text ;
-                    string magas1 = this.comboBox3.Text ;
+                    String magas1 = this.comboBox3.Text;
+
+                   /// string magas1 = this.comboBox3.Text ;
                     connection.Open();
-                    string sql = "UPDATE opera  SET  Magasin = @mag, magasinier = @magas1 , EtatOp = 'EnAttente'  Where Nu_op = @op)";
+                    string sql = "UPDATE opera  SET  Magasin = @mag, magasinier = @magas1 , EtatOp = 'EnAttente'  Where Nu_op = @op";
 
                     using (SqlCommand cmd1 = new SqlCommand(sql, connection))
                     {
-                       cmd1.Parameters.AddWithValue("@mag", mag);
 
-
-                       cmd1.Parameters.AddWithValue("@magas1", magas1);
-
-
+                        
+                        cmd1.Parameters.AddWithValue("@mag", mag);
+                        cmd1.Parameters.AddWithValue("@magas1", magas1);
                         cmd1.Parameters.AddWithValue("@op", op);
 
-
-
-                        // assign value to parameter 
+                       
                         cmd1.ExecuteNonQuery();
+                        connection.Close();
                     }
 
 
                     // aj  t2 
                     connection.Open();
-
+                  
 
                     for 
                         (int i = 0; i<dtbL.Rows.Count; i++ ) { 
@@ -110,7 +112,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         string QuantMax = dtbL.Rows[i]["QT_MAX"].ToString();
 
                         string EtatRef = "EnAttente";
-                        string sql1 = "INsert INTO Table_2OP Values(@1,@2,@3,@4,@5,'',@7)";
+                        string sql1 = "insert INTO Table_2OP Values(@1,@2,@3,@4,@5,'',@7)";
 
                         connection3.Open();
                         using (SqlCommand cmd2 = new SqlCommand(sql1, connection3))
@@ -164,7 +166,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
                 MessageBox.Show(EX.ToString());
             }
-
+            
 
         }
 
@@ -174,6 +176,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

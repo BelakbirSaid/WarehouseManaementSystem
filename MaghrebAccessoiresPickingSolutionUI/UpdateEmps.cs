@@ -38,9 +38,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
 
-            new operations().Show();
+
+            try { 
 
             string connectionString = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -62,10 +62,17 @@ namespace MaghrebAccessoiresPickingSolutionUI
             }
 
 
-
-
-
+            new operations().Show();
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+        }
         }
 }
