@@ -356,6 +356,12 @@
     <Compile Include="UpdateEmps.Designer.cs">
       <DependentUpon>UpdateEmps.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllops.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllops.Designer.cs">
+      <DependentUpon>ViewAllops.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dAch.resx">
       <DependentUpon>dAch.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +434,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateEmps.resx">
       <DependentUpon>UpdateEmps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllops.resx">
+      <DependentUpon>ViewAllops.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MaghrebAccessoiresPickingSolutionUI_TemporaryKey.pfx" />
     <None Include="packages.config" />

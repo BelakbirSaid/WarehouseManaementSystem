@@ -148,6 +148,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 }
 
 
+                this.textBox2.Text = "";
+                this.comboBox3.Text = "";
+                this.comboBox1.Text = "";
+                this.comboBox2.Text = "";
+                MessageBox.Show("Opération ajoutée ! ");
+
+
 
 
 
