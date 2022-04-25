@@ -278,6 +278,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button16_Click(object sender, EventArgs e)
         {
 
+
+            new HP().Show();
+            this.Hide();
         }
 
         private void button4_Click_2(object sender, EventArgs e)
