@@ -77,7 +77,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                        // dataGridView1.DataSource = dtbl1;
                     }
 
-                    if (mag == "3") { sqlQuery = "select * from Table_4HP1";
+                    if (mag == "3") { sqlQuery = "select * from Table_4HP3";
 
                         SqlCommand command2 = new SqlCommand(sqlQuery, connection);
 
@@ -96,6 +96,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     }
                     dataGridView1.DataSource = T0;
                     
+
+
 
 
 
@@ -162,13 +164,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
 
                 string emp = "";
+                int A = 0;
 
                 for (int i = 0; i < T0.Columns.Count; i++)
                 {
                     for (int j = 0; j < T0.Rows.Count; j++)
                     {
                         string key = T0.Rows[j][i].ToString();
-                        string expression = "EmplacementOpt like '%" + key+"%'";
+                        string expression = "EmplacementOpt = '" + key+"'";
                         DataRow[] foundRows;
                         
 
@@ -180,28 +183,32 @@ namespace MaghrebAccessoiresPickingSolutionUI
                             string EmpO = foundRows[0]["EmplacementAct"].ToString();
                             string classeO = foundRows[0]["Classe"].ToString();
                             emp = EmpO;
-                            this.label1.Text = emp;
+                            //this.label1.Text = emp;
+
+                            string expression1 = "Emp = '" + EmpO + "'";
+                            DataRow[] foundRows1;
+
+                            foundRows1 = T3.Select(expression1);
+
+                            if (foundRows1.Length != 0)
+                            {
+
+                                string classe1 = foundRows1[0]["Classe"].ToString();
+
+
+                                if (classe1 == "A         ") { dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Red; }
+
+                                if (classe1 == "B         ") { dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Yellow; }
+                                if (classe1 == "C         ") { dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Lime; }
+
+
+
+                            }
+
+
+
                         }
 
-                        string expression1 = "Emp like '%" + emp + "%'";
-                        DataRow[] foundRows1;
-
-                        // Use the Select method to find all rows matching the filter.
-                        foundRows1 = T3.Select(expression1);
-
-                        if (foundRows1.Length != 0)
-                        {
-
-                            //string  = foundRows1[0]["EmplacementAct"].ToString();
-                            string classe1 = foundRows1[0]["Classe"].ToString();
-                            //emp = EmpO;
-                            this.label1.Text = classe1;
-                            if (classe1 == "A") { dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Red; }
-
-                            if (classe1 == "B") { dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Yellow; }
-                            if (classe1 == "C") { dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Lime; }
-
-                        }
 
 
 
@@ -222,6 +229,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
                 MessageBox.Show(ad.ToString());
             }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
