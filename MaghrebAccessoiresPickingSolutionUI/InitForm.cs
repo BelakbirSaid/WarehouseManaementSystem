@@ -401,9 +401,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     }
 
 
-                
-
-
+               
 
 
             }
@@ -970,8 +968,30 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         }
 
 
+                        //delete before Upload 
 
-                        //upoa
+
+                        string connectionString3 = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
+                        using (SqlConnection connection4 = new SqlConnection(connectionString3))
+                        {
+                            string ale = A.ToString(); ;
+                           
+
+
+                            string sql = "DELETE FROM Table_1 WHERE EmplacementAct Like'" + ale+"'";
+                            connection4.Open();
+                            using (SqlCommand cmd = new SqlCommand(sql, connection4))
+                            {
+                                cmd.Parameters.AddWithValue("@name", ale);
+                               
+
+                                // assign value to parameter 
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+
+                        //upload 
+
 
 
                         for (int p = 0; p < dtbl6.Rows.Count; p++)
@@ -1011,9 +1031,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                         }
 
-                        //
-                        //
-                        //
+                     
                     }
 
 

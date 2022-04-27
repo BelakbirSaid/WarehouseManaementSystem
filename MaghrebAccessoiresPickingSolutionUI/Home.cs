@@ -21,13 +21,15 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button3_Click(object sender, EventArgs e)
         {
 
-
+            
 
             
+            
             panelChildForm.Visible = true; 
+
             openChildFormInPanel(new NavLogMenu());
 
-
+            
 
 
 
@@ -60,7 +62,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
             panelChildForm.Visible = true;
 
-            openChildFormInPanel(new IP());
+            openChildFormInPanel(new dis());
 
 
 
@@ -71,7 +73,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
             panelChildForm.Visible = true;
 
-            openChildFormInPanel(new operations());
+            openChildFormInPanel(new UpdateEmps());
 
 
         }
@@ -98,6 +100,16 @@ namespace MaghrebAccessoiresPickingSolutionUI
             panelChildForm.Visible = true;
 
             openChildFormInPanel(new et());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

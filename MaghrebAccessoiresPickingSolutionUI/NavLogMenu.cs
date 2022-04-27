@@ -25,7 +25,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
        
         private void NavLogMenu_Load(object sender, EventArgs e)
         {
-
+            this.pictureBox3.Visible = false;
+            this.label3.Visible = false; 
 
 
 

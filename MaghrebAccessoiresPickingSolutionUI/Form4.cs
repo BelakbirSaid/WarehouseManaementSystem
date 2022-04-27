@@ -74,8 +74,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
-
+            this.button11.Visible = false; 
+           
             openChildFormInPanel(new Home());
 
             //this.Style.BackColor = Color.DarkGray;
@@ -215,9 +215,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button19_Click(object sender, EventArgs e)
         {
-            
 
 
+            openChildFormInPanel(new et());
 
 
             //..
@@ -273,14 +273,23 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button10_Click(object sender, EventArgs e)
         {
 
+
+
+
+
+
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
 
 
-            new HP().Show();
-            this.Hide();
+            openChildFormInPanel(new HP());//..
+
+            hideSub();
+
+            //new HP().Show();
+            //this.Hide();
         }
 
         private void button4_Click_2(object sender, EventArgs e)
@@ -289,6 +298,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.Hide();
         }
 
-    
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

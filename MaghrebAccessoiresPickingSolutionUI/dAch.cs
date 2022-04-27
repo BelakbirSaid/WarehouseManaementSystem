@@ -30,8 +30,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
             string Mag = this.textBox4.Text ;
             string Al = this.textBox2.Text ;
-            this.label1.Visible = true;
-            label1.Text = "Taux d'occupation  par Famille";
+           // this.label1.Visible = true;
+           // label1.Text = "Taux d'occupation  par Famille";
             label5.Text = "Taux d'occupation  par CM";
 
 
@@ -166,14 +166,15 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
 
-
+            this.chart1.Visible = false; 
 
 
         }
 
         private void dAch_Load(object sender, EventArgs e)
         {
-            dataGridView1.AllowUserToAddRows = false;
+            this.chart1.Visible = false; 
+           /// dataGridView1.AllowUserToAddRows = false;
 
             pieChart1.Visible = false;
             dataGridView1.Visible = false;
@@ -182,6 +183,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             label5.Visible = false;
             chart1.Visible = false;
             label1.Visible = false; 
+            
             //on maga
 
 
@@ -197,9 +199,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.label1.Visible = true;
+           // this.label1.Visible = true;
             label5.Text = "Taux d'occupation Magasin";
-            label1.Text = "Taux de solicitation par allée";
+           // label1.Text = "Taux de solicitation par allée";
             this.label5.Visible = true;
 
             string mag1 = this.textBox3.Text;
@@ -321,7 +323,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
                 MessageBox.Show(ex.ToString());
             }
-
+            this.chart1.Visible = false;
 
 
 
