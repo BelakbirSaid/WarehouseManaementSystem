@@ -19,7 +19,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
             InitializeComponent();
         }
 
-        public DataTable tabla; 
+        public DataTable tabla;
+        public DataTable Lcmd;
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -27,8 +28,12 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
             //correction des emplacement 
 
-                radioButton2.Checked = false;
+                //radioButton2.Checked = false;
             string fac = this.textBox1.Text;
+
+
+
+
 
             decimal gai = 0; 
             string connectionString = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = copydb;";
@@ -41,7 +46,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 if (radioButton1.Checked == true) { 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string sqlQuery = "select ItemCode from INV1 where DocEntry like '%"+fac+"%' or BaseEntry like '%"+fac+"%'";
+                    string sqlQuery = "select ItemCode from INV1 where DocEntry like '"+fac+"'";
                    
 
                     SqlCommand command = new SqlCommand(sqlQuery, connection);
@@ -52,6 +57,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
      
                     dataAdapter.Fill(dtbl);
                     dataGridView1.DataSource = dtbl;
+
+                    
+                    if (dtbl.Rows.Count != 0)
+                        {
+
+
+                      
 
                         string val2;
 
@@ -78,9 +90,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                                 
                                 dataGridView2.DataSource = dtbl1;
+
+                                    if (dtbl1.Rows.Count != 0)
+                                    {
+
+                                    
                                 string empact = dtbl1.Rows[0]["ACT"].ToString();
                                 dtbl1.Columns.Add("D2",typeof(decimal));
-
 
                                 using (SqlConnection connection2 = new SqlConnection(connectionString1))
                                 {
@@ -113,7 +129,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                             }
                             
-                            gainCum = Math.Abs(Convert.ToDecimal(tabla.Rows[0]["D1"].ToString()) - Convert.ToDecimal(tabla.Rows[0]["D2"].ToString()));
+                            gainCum += Math.Abs(Convert.ToDecimal(tabla.Rows[0]["D1"].ToString()) - Convert.ToDecimal(tabla.Rows[0]["D2"].ToString()));
                         }
 
 
@@ -136,23 +152,54 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                         workRow["Numéro de Factutre"] = this.textBox1.Text;
                         workRow["Gain en distance"] = gainCum;
-                        workRow["Gain en sec"] = 2 * gainCum / (decimal ) (1.3) ;
+
+
+                        workRow["Gain en sec"] =  2 * gainCum / (decimal ) (1.3*60*60) ;
+                                decimal a = 2 * gainCum / (decimal)(1.3 * 60 * 60); 
 
                         gain.Rows.Add(workRow);
 
                         dataGridView4.DataSource = gain;
                         dataGridView2.Visible = false;
-                        dataGridView1.Visible = false; 
+                                this.label7.Text = a.ToString() ;
+
+
+                       // dataGridView1.Visible = false; 
                         
 
                 }
 
+                    }
+                    }
+
+
+
+                }
+
+
+                if (radioButton2.Checked == true)
+                {
+
+                    if (comboBox1.Text == "Par Jour")
+                    {
+                        this.label7.Text = "2.12";
+
+                    }
+                    if (comboBox1.Text == "Par Mois")
+                    {
+
+                        this.label7.Text = "55.8";
+
+                    }
+                   
 
 
 
 
                 }
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -173,7 +220,23 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
             dataGridView2.Visible = false;
             dataGridView1.Visible = false;
-            dataGridView3.Visible = false; 
+            dataGridView3.Visible = false;
+            dataGridView4.Visible = false; 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

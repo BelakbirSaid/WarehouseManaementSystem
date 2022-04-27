@@ -33,11 +33,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,6 +92,39 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel2.Size = new System.Drawing.Size(860, 100);
             this.panel2.TabIndex = 2;
             // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(24)))), ((int)(((byte)(40)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(731, 38);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(117, 34);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Chercher";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(356, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Numéro Opération";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(537, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 37);
+            this.textBox1.TabIndex = 2;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -102,24 +135,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label2.Size = new System.Drawing.Size(284, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Détails des opérations";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(548, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 22);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(378, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Numéro Opération";
             // 
             // dataGridView2
             // 
@@ -134,20 +149,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(860, 263);
             this.dataGridView2.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(24)))), ((int)(((byte)(40)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(731, 38);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 34);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Chercher";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ViewAllops
             // 

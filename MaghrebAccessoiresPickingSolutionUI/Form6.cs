@@ -41,7 +41,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
                 using (SqlConnection connection1 = new SqlConnection(connectionString1))
                 {
-                    string sqlQuery2 = "SELECT [Reference] ,[EmplacementOpt] , [EmplacementAct] ,[Classe] ,[qtystock] AS Stock,[CM] AS Code_Marque,[Famille],[Description],[blocs] AS Nombre_Unite_Didie FROM [Table_1] Where [Reference] like '%"+ refe + "%' AND [CM] like '"+ cm + "'  AND  [Famille] like '%"+ fam + "%'";
+                    string sqlQuery2 = "SELECT [Reference] , [EmplacementAct] ,[Classe] ,[qtystock] AS Stock,[CM] AS Code_Marque,[Famille],[Description],[blocs] AS Nombre_Unite_Didie FROM [Table_1] Where [Reference] like '%"+ refe + "%' AND [CM] like '"+ cm + "'  AND  [Famille] like '%"+ fam + "%'";
 
 
                     SqlCommand command2 = new SqlCommand(sqlQuery2, connection1);

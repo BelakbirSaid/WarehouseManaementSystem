@@ -179,6 +179,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void operations_Load(object sender, EventArgs e)
         {
+            this.textBox2.Visible = false;
+            this.label5.Visible = false; 
+
+
+
+
+
 
         }
 

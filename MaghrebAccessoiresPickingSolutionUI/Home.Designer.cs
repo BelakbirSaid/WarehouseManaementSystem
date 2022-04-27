@@ -156,7 +156,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelChildForm.Location = new System.Drawing.Point(0, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1037, 647);
