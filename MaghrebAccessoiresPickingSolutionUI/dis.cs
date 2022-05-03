@@ -154,8 +154,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         workRow["Gain en distance"] = gainCum;
 
 
-                        workRow["Gain en sec"] =  2 * gainCum / (decimal ) (1.3*60*60) ;
-                                decimal a = 2 * gainCum / (decimal)(1.3 * 60 * 60); 
+                        workRow["Gain en sec"] =  2 * gainCum / (decimal ) (0.95*60*60) ;
+                                decimal a = 2 * gainCum / (decimal)(0.95 * 60 * 60); 
 
                         gain.Rows.Add(workRow);
 

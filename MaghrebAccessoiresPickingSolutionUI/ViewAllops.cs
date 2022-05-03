@@ -67,7 +67,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 string num = textBox1.Text;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string sqlQuery = "SELECT * from Table_2OP WHERE Nu_op like '"+num+"'";
+                    string sqlQuery = "SELECT * from opera1 WHERE Nu_op like '" + num+"'";
                     //string sqlQuery1 = "SELECT   U_emp as Emplacement , ItemCode as Réf, OnHand as QtStock from oitw t1 where t1.WhsCode = '01' and t1.U_emp like '" + emplacement + "%'";
 
 

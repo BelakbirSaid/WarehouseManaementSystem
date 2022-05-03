@@ -63,9 +63,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     textBox2.Text = op.ToString();
                     //this.textBox1.Text = op.ToString();
                     dtbL = dtbl.Copy();
-                   // dataGridView1.DataSource = dtbL;
-
-                    // dataGridView1.DataSource = dtbl;
+             
                     connection.Close();
                     //
                 }
@@ -106,24 +104,31 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     using (SqlConnection connection3 = new SqlConnection(connectionString2))
                     {
                         string Num_op = op;
+                        string refe = dtbL.Rows[i]["Reference"].ToString();
+                        string refedes = dtbL.Rows[i]["Description"].ToString();
                         string EmAc = dtbL.Rows[i]["EmplacementAct"].ToString();
                         string EmOp = dtbL.Rows[i]["EmplacementOpt"].ToString();
-                        string Quant = dtbL.Rows[i]["Stock"].ToString();
+
+                        string Quant = dtbL.Rows[i]["Reference"].ToString();
                         string QuantMax = dtbL.Rows[i]["QT_MAX"].ToString();
 
                         string EtatRef = "EnAttente";
-                        string sql1 = "insert INTO Table_2OP Values(@1,@2,@3,@4,@5,'',@7)";
+                        string sql1 = "insert INTO opera1 Values(@1,@2,@3,@4,@5,@6,@7,@8)";
 
                         connection3.Open();
                         using (SqlCommand cmd2 = new SqlCommand(sql1, connection3))
                         {
 
                             cmd2.Parameters.AddWithValue("@1", Num_op);
-                            cmd2.Parameters.AddWithValue("@2", EmAc);
-                            cmd2.Parameters.AddWithValue("@3", EmOp);
-                            cmd2.Parameters.AddWithValue("@4", Quant);
-                            cmd2.Parameters.AddWithValue("@5", QuantMax);
-                            cmd2.Parameters.AddWithValue("@7", EtatRef);
+                            cmd2.Parameters.AddWithValue("@2", refe);
+                            cmd2.Parameters.AddWithValue("@3", refedes);
+                            cmd2.Parameters.AddWithValue("@4", EmAc);
+                            cmd2.Parameters.AddWithValue("@5", EmOp);
+
+
+                            cmd2.Parameters.AddWithValue("@6", Quant);
+                            cmd2.Parameters.AddWithValue("@7", QuantMax);
+                            cmd2.Parameters.AddWithValue("@8", EtatRef);
                           
 
 

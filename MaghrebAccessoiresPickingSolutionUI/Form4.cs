@@ -74,7 +74,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            this.button11.Visible = false; 
+            //this.button11.Visible = false;
+            this.button3.Visible = false; 
            
             openChildFormInPanel(new Home());
 
@@ -264,9 +265,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button11_Click_1(object sender, EventArgs e)
         {
 
-            openChildFormInPanel(new dAch());//..
-
-            hideSub();
+           
 
         }
 
@@ -300,6 +299,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            new DashboardWS().Show();
+            this.Hide();
+
 
         }
     }

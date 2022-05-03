@@ -227,6 +227,12 @@
     <Compile Include="dAch.Designer.cs">
       <DependentUpon>dAch.cs</DependentUpon>
     </Compile>
+    <Compile Include="DashboardWS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardWS.Designer.cs">
+      <DependentUpon>DashboardWS.cs</DependentUpon>
+    </Compile>
     <Compile Include="dis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </Compile>
     <EmbeddedResource Include="dAch.resx">
       <DependentUpon>dAch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardWS.resx">
+      <DependentUpon>DashboardWS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dis.resx">
       <DependentUpon>dis.cs</DependentUpon>

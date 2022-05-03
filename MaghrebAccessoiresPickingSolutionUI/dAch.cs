@@ -19,7 +19,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
             InitializeComponent();
         }
-        //Func<ChartPoint, string> labelPoint = chartPoint => string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
+       // Func<ChartPoint, string> labelPoint = chartPoint => string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
         Func<ChartPoint, string> labelPoint1 = chartPoint1 => string.Format("{0} ({1:P})", chartPoint1.Y, chartPoint1.Participation);
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -30,10 +30,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
             string Mag = this.textBox4.Text ;
             string Al = this.textBox2.Text ;
-           // this.label1.Visible = true;
-           // label1.Text = "Taux d'occupation  par Famille";
-            label5.Text = "Taux d'occupation  par CM";
-
+          
+            
 
            // this.dataGridView1.Visible = false; 
 
@@ -95,19 +93,12 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         piechartData.Add(new PieSeries { Title = item.Cells["CM"].Value.ToString(), Values = new ChartValues<decimal> { Convert.ToDecimal(item.Cells["OCC"].Value) }, DataLabels = true, LabelPoint = labelPoint1 });
                     }
                     pieChart1.Series = piechartData;
-
-
-
-                    //////////////////
-                    ///
-
-
                 }
 
 
 
-
-               
+                /*
+                
                 using (SqlConnection connection1 = new SqlConnection(connectionString1))
                 {
                     
@@ -153,7 +144,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
           
 
 
-                }
+                } */
 
 
 
@@ -198,7 +189,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            /*
            // this.label1.Visible = true;
             label5.Text = "Taux d'occupation Magasin";
            // label1.Text = "Taux de solicitation par allée";
@@ -336,7 +327,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
 
-
+            */
 
         }
 
