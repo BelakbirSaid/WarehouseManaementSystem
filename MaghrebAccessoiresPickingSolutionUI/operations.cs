@@ -109,7 +109,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         string EmAc = dtbL.Rows[i]["EmplacementAct"].ToString();
                         string EmOp = dtbL.Rows[i]["EmplacementOpt"].ToString();
 
-                        string Quant = dtbL.Rows[i]["Reference"].ToString();
+                        string Quant = dtbL.Rows[i]["Stock"].ToString();
                         string QuantMax = dtbL.Rows[i]["QT_MAX"].ToString();
 
                         string EtatRef = "EnAttente";
