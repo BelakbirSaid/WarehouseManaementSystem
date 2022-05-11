@@ -72,7 +72,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(203, 144);
             this.button1.TabIndex = 18;
-            this.button1.Text = "Analyse KPIs";
+            this.button1.Text = "Distance parcourue";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -156,7 +156,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1037, 647);

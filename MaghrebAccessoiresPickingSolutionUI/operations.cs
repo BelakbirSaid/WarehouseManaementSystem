@@ -180,6 +180,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             }
             
 
+
         }
 
         private void operations_Load(object sender, EventArgs e)
@@ -200,6 +201,16 @@ namespace MaghrebAccessoiresPickingSolutionUI
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

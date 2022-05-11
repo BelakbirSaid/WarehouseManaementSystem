@@ -30,7 +30,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,10 +43,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -62,6 +62,40 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel1.Size = new System.Drawing.Size(1077, 294);
             this.panel1.TabIndex = 0;
             // 
+            // comboBox3
+            // 
+            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "OP1",
+            "OP2",
+            "OP3"});
+            this.comboBox3.Location = new System.Drawing.Point(371, 199);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(195, 35);
+            this.comboBox3.TabIndex = 20;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(371, 121);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(195, 37);
+            this.textBox2.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(90, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 31);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Magasinier";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -72,6 +106,19 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label1.Size = new System.Drawing.Size(259, 31);
             this.label1.TabIndex = 16;
             this.label1.Text = "Nouvelle Opération ";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(90, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(249, 31);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Numéro d\'opration";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button3
             // 
@@ -104,6 +151,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(176, 35);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -181,6 +229,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1077, 100);
             this.panel3.TabIndex = 21;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -193,53 +242,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1077, 301);
             this.panel4.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(90, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 31);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Magasinier";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(90, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 31);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Numéro d\'opration";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(371, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 37);
-            this.textBox2.TabIndex = 23;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "OP1",
-            "OP2",
-            "OP3"});
-            this.comboBox3.Location = new System.Drawing.Point(371, 199);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(195, 35);
-            this.comboBox3.TabIndex = 20;
             // 
             // operations
             // 

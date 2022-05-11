@@ -137,6 +137,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                             decimal NumbinPall;
                             DataTable dtba = new DataTable();
+
                             // separation des cathégories 
                             dtba = dtbl6.Copy() ;
 
@@ -242,7 +243,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                             using (SqlConnection connection3 = new SqlConnection(connectionString1))
                             {
-                                string sqQueryEmpl = "select [Emp] ,[MAG] ,[A] ,[C] ,[H] ,[Index] AS indice,[Distance],[Hauteur],[Longueur],[Profondeur],[Classe] from  siteAP where MAG like 'MAG" + M+ "%' and A like 'A0" +A+ "       %' order by [Index]";
+                                string sqQueryEmpl = "select [Emp] ,[MAG] ,[A] ,[C] ,[H] ,[Index] AS indice,[Distance],[Hauteur],[Longueur],[Profondeur],[Classe] from  siteAP where MAG like 'MAG" + M+ "%' and A like 'A" +A+ "       %' order by [Index]";
                                 SqlCommand command4 = new SqlCommand(sqQueryEmpl, connection3);
                                 SqlDataAdapter dataAdapter4 = new SqlDataAdapter(command4);
                    
@@ -759,9 +760,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         dtba = dtbl6.Copy();
 
 
-
-
-
                         //this.dataGridView1.DataSource = dtbl6;
 
 
@@ -793,14 +791,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                         //
 
-
                         //
 
 
-                        //up piv
+                        //upload picking area information 
 
-
-
+                       /*
+                        
                         for (int p = 0; p < dtba.Rows.Count; p++)
                         {
                             string connectionString2 = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
@@ -821,8 +818,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
                                 string CM = dtba.Rows[p]["CM"].ToString();
 
 
-
-                                string sql = "Update  Table_3 values (@1,@2,@3,@4,@5,@6,@7,@8,@9,@10)";
+                                
+                                string sql = "Update  Table_3  values (@1,@2,@3,@4,@5,@6,@7,@8,@9,@10)";
                                 connection3.Open();
                                 using (SqlCommand cmd = new SqlCommand(sql, connection3))
                                 {
@@ -836,21 +833,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
                                     cmd.Parameters.AddWithValue("@7", Prix_Unitaire);
                                     cmd.Parameters.AddWithValue("@8", Nombre_de_Factures);
                                     cmd.Parameters.AddWithValue("@9", Famille);
-                                    cmd.Parameters.AddWithValue("@10", CM);
-
-
-
-
+                                    cmd.Parameters.AddWithValue("@10",
                                     // assign value to parameter 
                                     cmd.ExecuteNonQuery();
                                 }
                             }
 
                         }
-
-
-
-
+                        */
 
 
                         dtbl6.DefaultView.Sort = "VarCom Desc";
@@ -860,7 +850,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                         using (SqlConnection connection3 = new SqlConnection(connectionString1))
                         {
-                            string sqQueryEmpl = "select [Emp] ,[MAG] ,[A] ,[C] ,[H] ,[Index] AS indice,[Distance],[Hauteur],[Longueur],[Profondeur],[Classe] from  siteAP where MAG like 'MAG" + M + "%' and A like 'A0" + A + "       %' order by [Index]";
+                            string sqQueryEmpl = "select [Emp] ,[MAG] ,[A] ,[C] ,[H] ,[Index] AS indice,[Distance],[Hauteur],[Longueur],[Profondeur],[Classe] from  siteAP where MAG like 'MAG" + M + "%' and A like 'A" + A + "       %' order by [Index]";
                             SqlCommand command4 = new SqlCommand(sqQueryEmpl, connection3);
                             SqlDataAdapter dataAdapter4 = new SqlDataAdapter(command4);
 
@@ -974,16 +964,19 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         string connectionString3 = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
                         using (SqlConnection connection4 = new SqlConnection(connectionString3))
                         {
-                            string ale = A.ToString(); ;
+                            string ale = A.ToString(); 
+                            string mag = M.ToString();
+                            string Empplacemnt = "MAG" +mag+ "-A" +ale+"%";
                            
 
 
-                            string sql = "DELETE FROM Table_1 WHERE EmplacementAct Like'" + ale+"'";
+                            string sql = "DELETE FROM Table_1 WHERE EmplacementAct like @name";
                             connection4.Open();
                             using (SqlCommand cmd = new SqlCommand(sql, connection4))
                             {
-                                cmd.Parameters.AddWithValue("@name", ale);
+                                cmd.Parameters.AddWithValue("@name", Empplacemnt);
                                
+
 
                                 // assign value to parameter 
                                 cmd.ExecuteNonQuery();
@@ -1068,7 +1061,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 Parallel.For(0, coul1.Length, i =>
                 {
 
-                    UpdateAisle(coul1[i], levels[j]);
+                    UpdateAisle2(coul1[i], levels[j]);
                     // UpdateAisle(coul1[i], levels[j]);
                    
 
@@ -1119,6 +1112,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
             UpdateAisle2(All.ToString(), mag.ToString()); 
 
 
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

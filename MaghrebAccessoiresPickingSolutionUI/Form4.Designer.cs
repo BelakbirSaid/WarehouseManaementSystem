@@ -31,7 +31,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.paneltoolssub = new System.Windows.Forms.Panel();
             this.button17 = new System.Windows.Forms.Button();
@@ -64,7 +63,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panelSideMenu.Controls.Add(this.button4);
-            this.panelSideMenu.Controls.Add(this.button19);
             this.panelSideMenu.Controls.Add(this.button18);
             this.panelSideMenu.Controls.Add(this.paneltoolssub);
             this.panelSideMenu.Controls.Add(this.button2);
@@ -91,7 +89,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(0, 757);
+            this.button4.Location = new System.Drawing.Point(0, 712);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(250, 45);
@@ -101,25 +99,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_2);
-            // 
-            // button19
-            // 
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.ForeColor = System.Drawing.Color.Silver;
-            this.button19.Location = new System.Drawing.Point(0, 712);
-            this.button19.Name = "button19";
-            this.button19.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button19.Size = new System.Drawing.Size(250, 45);
-            this.button19.TabIndex = 11;
-            this.button19.Text = "Paramètres";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button18
             // 
@@ -484,7 +463,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Panel paneltoolssub;
         private System.Windows.Forms.Button button17;
