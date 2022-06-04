@@ -24,8 +24,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void button3_Click(object sender, EventArgs e)
         {
             string connectionString1 = "Server=(localdb)\\MyInstance1;Integrated Security=true; Database = EmpOptimisation;";
-            string Mag = this.textBox4.Text;
-            string Al = this.textBox2.Text;
+            string Mag = this.comboBox1.Text;
+            string Al = this.comboBox2.Text;
 
             if (Mag!="" && Al != "")
             {
@@ -34,7 +34,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     using (SqlConnection connection1 = new SqlConnection(connectionString1))
                     {
                         string sqlQuery2 = "SELECT  [CM] AS CM, COUNT( Distinct ([EmplacementOpt])) AS OCC FROM [Table_1] Where  [EmplacementOpt] like '%MAG" + Mag + "-A" + Al + "%' Group by [CM] ";
-                        //string sqlQuery3 = "SELECT [Famille] AS FM, COUNT( Distinct ([EmplacementOpt])) AS OCC1 FROM [Table_1] Where  [EmplacementOpt] like '%MAG" + Mag + "-A" + Al + "%' Group by [Famille] ";
+                 
 
 
                         SqlCommand command2 = new SqlCommand(sqlQuery2, connection1);
@@ -46,9 +46,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         DataTable dtbl2 = new DataTable();
                         dataAdapter2.Fill(dtbl2);
 
-
-
-                     
 
                         ///////////////////////////
                         Decimal TotalPrice = 0;
@@ -85,19 +82,12 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
 
-
-
-
                 }
 
                 catch (Exception el)
                 {
                     MessageBox.Show(el.ToString()); ; 
                 }
-
-
-
-
 
             }
 
@@ -107,6 +97,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
         {
             dataGridView1.Visible = false;
             dataGridView2.Visible = false;
+            panel5.Visible = false;
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

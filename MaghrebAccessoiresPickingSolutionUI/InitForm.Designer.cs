@@ -93,13 +93,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(26, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 31);
+            this.label3.Size = new System.Drawing.Size(336, 26);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Mise à jour";
+            this.label3.Text = "Détermination des emplacements";
             // 
             // radioButton2
             // 
@@ -108,10 +108,10 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.radioButton2.ForeColor = System.Drawing.Color.White;
             this.radioButton2.Location = new System.Drawing.Point(235, 232);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(116, 31);
+            this.radioButton2.Size = new System.Drawing.Size(98, 31);
             this.radioButton2.TabIndex = 20;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Partielle";
+            this.radioButton2.Text = "Partiel";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -122,10 +122,10 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.radioButton1.ForeColor = System.Drawing.Color.White;
             this.radioButton1.Location = new System.Drawing.Point(235, 146);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(97, 31);
+            this.radioButton1.Size = new System.Drawing.Size(85, 31);
             this.radioButton1.TabIndex = 19;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Totale";
+            this.radioButton1.Text = "Total";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -141,7 +141,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(192, 40);
             this.button2.TabIndex = 18;
-            this.button2.Text = "Start";
+            this.button2.Text = "Commencer";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -181,7 +181,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(230, 40);
             this.button1.TabIndex = 22;
-            this.button1.Text = "Start";
+            this.button1.Text = "Commencer";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

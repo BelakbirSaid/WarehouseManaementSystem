@@ -75,7 +75,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string sqlQuery = "SELECT [Reference]  , [EmplacementAct] ,[Classe] ,[qtystock] AS Stock,[CM] AS Code_Marque,[Famille],[Description],[blocs] AS Nombre_Unite_Didie FROM [Table_1] Where [EmplacementAct] like '%"+ emplacement + "%'";
+                    string sqlQuery = "SELECT [Reference]  ,[EmplacementAct] AS Emp_Actuel, [EmplacementOpt] AS nouvel_EMP ,[Classe] ,[qtystock] AS Stock,[CM] AS Code_Marque,[Famille],[Description],[blocs] AS Nombre_Unite_Didie FROM [Table_1] Where [EmplacementAct] like '%" + emplacement + "%'";
                     string sqlQuery1 = "SELECT   U_emp as Emplacement , ItemCode as Réf, OnHand as QtStock from oitw t1 where t1.WhsCode = '01' and t1.U_emp like '" + emplacement + "%'";
 
 
@@ -84,6 +84,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
 
 
                     DataTable dtbl = new DataTable();

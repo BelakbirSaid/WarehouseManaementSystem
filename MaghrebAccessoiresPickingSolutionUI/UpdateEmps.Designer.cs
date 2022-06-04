@@ -44,7 +44,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(981, 100);
+            this.panel1.Size = new System.Drawing.Size(1006, 100);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -117,7 +117,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(981, 728);
+            this.ClientSize = new System.Drawing.Size(1006, 728);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);

@@ -72,6 +72,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.Controls.Add(this.panelChildForm);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -199,8 +200,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(0, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(61, 113);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1095, 763);
             this.panelChildForm.TabIndex = 3;
@@ -213,7 +213,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(1095, 763);
-            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "NavLogMenu";

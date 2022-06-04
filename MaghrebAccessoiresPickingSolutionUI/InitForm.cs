@@ -19,11 +19,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
             InitializeComponent();
         }
 
-        public string[] levels = { "1","2"};
-        
+        public string[] levels = { "1"};
 
-        public string[] coul1 = { "5", "2", "1", "3", "6", "4", "7", "8", "9"};
-        public string[] coul2 = { "10", "11", "12"};
+
+        public string[] coul1 = { "05", "02", "01", "03", "06", "04", "07", "08", "09", "10", "11","13" };
+       // public string[] coul2 = { };
 
 
 
@@ -43,14 +43,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button2.Visible = false;
             this.panel2.Visible = false; 
            
-
-            //this.WindowState = FormWindowState.Minimized;
-            
-            //this.WindowState = FormWindowState.Normal;
-
-
-
-            // this.textBox1.Text = levels[0];
 
 
         }
@@ -892,12 +884,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
                                 haut1 = Convert.ToDecimal(dtbl6.Rows[refe]["haut"].ToString());
                                 TMothsv = Convert.ToDecimal(dtbl6.Rows[refe]["QT3Mois"].ToString());
 
+                                // calcu de l'espace didié à la référence largref signifie la largeur occ par une référence 
 
                                 largref = (decimal)((decimal)0.75 * lar1 * TMothsv / (((decimal)hautEmp / haut1) * ((decimal)ProfEmp / prof1)));
                                 dtbl6.Rows[refe]["Laroccu"] = (decimal)largref;
                                 refe++;
 
-                                //dtbl6.Rows[refe]["EmplOptimal"] = Empldtbl.Rows[emp]["Emplacement"].ToString();
+                              
 
                             }
                             emp++; // increment
@@ -907,7 +900,9 @@ namespace MaghrebAccessoiresPickingSolutionUI
                         // if occ  >  2250
 
 
-                        // affectation ep ca
+                        // algo affectation 
+
+
                         dtbl6.Columns.Add("EmplOptimal", typeof(string));
                         dtbl6.Columns.Add("classe", typeof(string));
                         dtbl6.DefaultView.Sort = "VarCom Desc";
@@ -921,18 +916,28 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                         while (j < Empldtbl.Rows.Count)//loop on emp
                         {
+                            // 
+
+
+                            
+
+
+
                             for (int i = 0; i < dtbl6Copy.Rows.Count; i++) //loop ref 
                             {
+
                                 if (Sum(dtbl6Copy, i + 1) > 2250)
                                 {
+                                  
                                     for (int k = s; k < s + i; k++)
                                     {
                                         dtbl6.Rows[k]["EmplOptimal"] = Empldtbl.Rows[t]["Emp"].ToString();
                                         dtbl6.Rows[k]["classe"] = Empldtbl.Rows[t]["Classe"].ToString();
 
                                     }
-                                    s += i;
+                                    s += i; 
                                     t += 1;
+
                                     buf = Copyfromi(dtbl6Copy, i);
 
                                     dtbl6Copy = buf;
@@ -941,6 +946,11 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
                                     break;
                                 }
+
+
+
+
+
                                 if (Sum(dtbl6Copy, dtbl6Copy.Rows.Count) <= 2250 || i == dtbl6Copy.Rows.Count - 1)
                                 {
                                     for (int k = s; k < dtbl6.Rows.Count; k++)
@@ -956,6 +966,13 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
                         }
+
+
+
+
+
+
+
 
 
                         //delete before Upload 
@@ -1042,7 +1059,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Erreur d'execution dans : "+ex.ToString());
             }
 
 
@@ -1062,7 +1079,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 {
 
                     UpdateAisle2(coul1[i], levels[j]);
-                    // UpdateAisle(coul1[i], levels[j]);
+                    //mettre à jour tous les allées dans le magasin 
                    
 
                 });

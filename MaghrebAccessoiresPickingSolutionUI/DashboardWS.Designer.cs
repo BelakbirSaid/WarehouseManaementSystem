@@ -30,17 +30,18 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,26 +50,25 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(24)))), ((int)(((byte)(40)))));
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -76,30 +76,25 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1105, 195);
+            this.panel3.Size = new System.Drawing.Size(1130, 195);
             this.panel3.TabIndex = 1;
             // 
-            // textBox4
+            // label2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(268, 126);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 33);
-            this.textBox4.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(698, 129);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 33);
-            this.textBox2.TabIndex = 21;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(21, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 31);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "DASHBOARD";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(-403, 343);
+            this.textBox1.Location = new System.Drawing.Point(-390, 343);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 33);
             this.textBox1.TabIndex = 20;
@@ -141,7 +136,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button3.Text = "Visualiser";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel5
@@ -155,20 +150,30 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 195);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1105, 492);
+            this.panel5.Size = new System.Drawing.Size(1130, 751);
             this.panel5.TabIndex = 3;
             // 
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.panel8.Controls.Add(this.dataGridView2);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.label9);
-            this.panel8.Location = new System.Drawing.Point(18, 265);
+            this.panel8.Location = new System.Drawing.Point(31, 394);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(381, 176);
+            this.panel8.Size = new System.Drawing.Size(504, 176);
             this.panel8.TabIndex = 9;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(-203, 280);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(424, 170);
+            this.dataGridView2.TabIndex = 11;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // panel9
             // 
@@ -176,7 +181,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel9.Controls.Add(this.label8);
             this.panel9.Location = new System.Drawing.Point(24, 63);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(336, 93);
+            this.panel9.Size = new System.Drawing.Size(455, 93);
             this.panel9.TabIndex = 8;
             // 
             // label8
@@ -197,17 +202,28 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(19, 20);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(238, 27);
+            this.label9.Size = new System.Drawing.Size(260, 27);
             this.label9.TabIndex = 7;
-            this.label9.Text = "Gain après mise  à jour";
+            this.label9.Text = "listes des emplacements";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(135, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(458, 98);
+            this.dataGridView1.TabIndex = 10;
             // 
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.panel7.Controls.Add(this.dataGridView2);
             this.panel7.Controls.Add(this.pieChart1);
             this.panel7.Controls.Add(this.label5);
-            this.panel7.Location = new System.Drawing.Point(622, 70);
+            this.panel7.Location = new System.Drawing.Point(635, 199);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(445, 387);
             this.panel7.TabIndex = 9;
@@ -238,7 +254,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(18, 70);
+            this.panel2.Location = new System.Drawing.Point(31, 199);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(381, 176);
             this.panel2.TabIndex = 6;
@@ -284,43 +300,50 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.label1.Size = new System.Drawing.Size(0, 27);
             this.label1.TabIndex = 5;
             // 
-            // label2
+            // comboBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(21, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 31);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "DASHBOARD";
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBox1.Location = new System.Drawing.Point(260, 125);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 35);
+            this.comboBox1.TabIndex = 25;
             // 
-            // dataGridView1
+            // comboBox2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(135, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(458, 98);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(67, -70);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(424, 170);
-            this.dataGridView2.TabIndex = 11;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13"});
+            this.comboBox2.Location = new System.Drawing.Point(691, 132);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 35);
+            this.comboBox2.TabIndex = 11;
             // 
             // DashboardWS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 687);
+            this.ClientSize = new System.Drawing.Size(1130, 946);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Name = "DashboardWS";
@@ -332,16 +355,16 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.panel5.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,8 +372,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -371,5 +392,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

@@ -82,18 +82,14 @@ namespace MaghrebAccessoiresPickingSolutionUI
                     using (SqlCommand cmd1 = new SqlCommand(sql, connection))
                     {
 
-                        
                         cmd1.Parameters.AddWithValue("@mag", mag);
                         cmd1.Parameters.AddWithValue("@magas1", magas1);
                         cmd1.Parameters.AddWithValue("@op", op);
-
-                       
                         cmd1.ExecuteNonQuery();
                         connection.Close();
                     }
 
 
-                    // aj  t2 
                     connection.Open();
                   
 
@@ -124,15 +120,10 @@ namespace MaghrebAccessoiresPickingSolutionUI
                             cmd2.Parameters.AddWithValue("@3", refedes);
                             cmd2.Parameters.AddWithValue("@4", EmAc);
                             cmd2.Parameters.AddWithValue("@5", EmOp);
-
-
                             cmd2.Parameters.AddWithValue("@6", Quant);
                             cmd2.Parameters.AddWithValue("@7", QuantMax);
                             cmd2.Parameters.AddWithValue("@8", EtatRef);
-                          
-
-
-                                // assign value to parameter 
+            
 
                                 cmd2.ExecuteNonQuery();
                         }
@@ -144,12 +135,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
 
 
-                    // 
-
-
-                    // dataGridView1.DataSource = dtbl;
-
-                    //
                 }
 
 
@@ -158,16 +143,6 @@ namespace MaghrebAccessoiresPickingSolutionUI
                 this.comboBox1.Text = "";
                 this.comboBox2.Text = "";
                 MessageBox.Show("Opération ajoutée ! ");
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -25,8 +25,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
        
         private void NavLogMenu_Load(object sender, EventArgs e)
         {
-            this.pictureBox3.Visible = false;
-            this.label3.Visible = false; 
+          //  this.pictureBox3.Visible = false;
+          //  this.label3.Visible = false; 
 
 
 
@@ -88,8 +88,8 @@ namespace MaghrebAccessoiresPickingSolutionUI
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            panelChildForm.Visible = true;
-            openChildFormInPanel(new dAch());
+            new DashboardWS().Show();
+          
 
         }
     }

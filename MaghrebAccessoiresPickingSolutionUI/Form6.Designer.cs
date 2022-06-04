@@ -223,7 +223,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(113, 40);
             this.button3.TabIndex = 14;
-            this.button3.Text = "Recherche";
+            this.button3.Text = "Consulter";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;

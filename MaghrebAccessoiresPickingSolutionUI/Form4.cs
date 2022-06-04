@@ -75,7 +75,7 @@ namespace MaghrebAccessoiresPickingSolutionUI
         private void Form4_Load(object sender, EventArgs e)
         {
             //this.button11.Visible = false;
-            this.button3.Visible = false; 
+          //  this.button3.Visible = false; 
            
             openChildFormInPanel(new Home());
 
